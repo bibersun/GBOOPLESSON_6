@@ -1,14 +1,18 @@
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class OrderOutputJSON implements ToJSON{
+public class OrderOutputJSON extends Order_2 implements ToJSON{
 
     private final String fileName;
-    private final Order_2 order_2;
 
-    public OrderOutputJSON(String fileName) {
-        order_2 = new InputConsoleToOrder();
+
+    public OrderOutputJSON(Order_2 order_2, String fileName) {
+        super(order_2.clientName,
+                order_2.product,
+                order_2.qnt,
+                order_2.price);
         this.fileName = fileName;
+
     }
 
     @Override
@@ -16,10 +20,10 @@ public class OrderOutputJSON implements ToJSON{
 
         try (FileWriter writer = new FileWriter(fileName, false)) {
             writer.write("{\n");
-            writer.write("\"clientName\":\""+ this.order_2.getClientName() + "\",\n");
-            writer.write("\"product\":\""+ this.order_2.getProduct()+"\",\n");
-            writer.write("\"qnt\":"+ this.order_2.getQnt()+",\n");
-            writer.write("\"price\":"+this.order_2.getPrice()+"\n");
+            writer.write("\"clientName\":\""+ this.clientName + "\",\n");
+            writer.write("\"product\":\""+ this.product+"\",\n");
+            writer.write("\"qnt\":"+ this.qnt+",\n");
+            writer.write("\"price\":"+this.price+"\n");
             writer.write("}\n");
             writer.flush();
         } catch (IOException ex) {

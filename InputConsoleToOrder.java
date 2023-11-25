@@ -5,10 +5,10 @@ public class InputConsoleToOrder extends Order_2 implements FromConsole{
     private final Scanner scanner = new Scanner(System.in);
 
     public InputConsoleToOrder() {
-        this.setClientName(promptConsole("Имя клиента: "));
-        this.setProduct(promptConsole("Продукт: "));
-        this.setQnt(Integer.parseInt(promptConsole("Кол-во: ")));
-        this.setPrice(Integer.parseInt(promptConsole("Цена: ")));
+        this.clientName = promptConsole("Имя клиента: ");
+        this.product = promptConsole("Продукт: ");
+        this.qnt = Integer.parseInt(promptConsole("Кол-во: "));
+        this.price = Integer.parseInt(promptConsole("Цена: "));
 
     }
 

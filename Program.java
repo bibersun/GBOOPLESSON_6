@@ -8,9 +8,14 @@ public class Program {
      */
     public static void main(String[] args) {
 
-        OrderOutputJSON orderOutputJSON = new OrderOutputJSON("order.json");
+        Order_2 order = new Order_2("", "", 0, 0);
 
-        orderOutputJSON.saveToJson();
+        order = new InputConsoleToOrder();
+
+        OrderOutputJSON order1 = new OrderOutputJSON(order,"order.json");
+
+        order1.saveToJson();
+
 
     }
 
