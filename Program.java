@@ -7,7 +7,7 @@ public class Program {
      * @param args
      */
     public static void main(String[] args) {
-
+        //строка ниже в данной реализации бессмысленна
         Order_2 order = new Order_2("", "", 0, 0);
 
         order = new InputConsoleToOrder();

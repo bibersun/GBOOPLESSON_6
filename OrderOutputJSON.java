@@ -20,10 +20,10 @@ public class OrderOutputJSON extends Order_2 implements ToJSON{
 
         try (FileWriter writer = new FileWriter(fileName, false)) {
             writer.write("{\n");
-            writer.write("\"clientName\":\""+ this.clientName + "\",\n");
-            writer.write("\"product\":\""+ this.product+"\",\n");
-            writer.write("\"qnt\":"+ this.qnt+",\n");
-            writer.write("\"price\":"+this.price+"\n");
+            writer.write("\"clientName\":\""+ this.getClientName() + "\",\n");
+            writer.write("\"product\":\""+ this.getProduct()+"\",\n");
+            writer.write("\"qnt\":"+ this.getQnt()+",\n");
+            writer.write("\"price\":"+this.getPrice()+"\n");
             writer.write("}\n");
             writer.flush();
         } catch (IOException ex) {

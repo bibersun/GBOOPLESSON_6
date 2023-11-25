@@ -17,22 +17,6 @@ public class Order_2 {
         return qnt;
     }
 
-//    public void setClientName(String clientName) {
-//        this.clientName = clientName;
-//    }
-//
-//    public void setProduct(String product) {
-//        this.product = product;
-//    }
-//
-//    public void setQnt(int qnt) {
-//        this.qnt = qnt;
-//    }
-//
-//    public void setPrice(int price) {
-//        this.price = price;
-//    }
-
     public int getPrice() {
         return price;
     }
