@@ -12,9 +12,9 @@ public class Program {
 
         order = new InputConsoleToOrder();
 
-        OrderOutputJSON order1 = new OrderOutputJSON(order,"order.json");
+        OrderOutputJSON orderOutputJSON = new OrderOutputJSON(order,"order.json");
 
-        order1.saveToJson();
+        orderOutputJSON.saveToJson();
 
 
     }
