@@ -7,10 +7,10 @@ public class OrderOutputJSON extends Order_2 implements ToJSON{
 
 
     public OrderOutputJSON(Order_2 order_2, String fileName) {
-        super(order_2.clientName,
-                order_2.product,
-                order_2.qnt,
-                order_2.price);
+        super(order_2.getClientName(),
+                order_2.getProduct(),
+                order_2.getQnt(),
+                order_2.getPrice());
         this.fileName = fileName;
 
     }
